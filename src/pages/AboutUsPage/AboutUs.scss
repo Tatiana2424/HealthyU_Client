@@ -1,0 +1,16 @@
+// AboutUs.scss
+.about-us-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 15px;
+    }
+}

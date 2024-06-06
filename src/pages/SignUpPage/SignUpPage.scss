@@ -1,0 +1,141 @@
+.sign-up-component {
+    margin: 50px;
+    margin-bottom: 100px;
+
+    .error-message{
+        color: red;
+    }
+
+    .sign-up-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        svg {
+            // Logo styles here
+        }
+
+        h1 {
+            margin: 1rem 0;
+        }
+
+        .terms {
+            input {
+                cursor: pointer;
+                margin-right: 0.5rem;
+                &:hover {
+                    border: 2px solid #000000;
+                }
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+
+            label {
+                display: block;
+                text-align: left;
+            }
+
+            select {
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+
+                option {
+                    span{
+                        padding: 0.5rem;
+                    }
+                    
+
+                    &:hover {
+                        background-color: darken(#a9c623, 10%);
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                padding: 0.5rem;
+                margin-top: 0.5rem;
+                border: 1px solid #ccc;
+            }
+        }
+        .form-forgot-password {
+            margin-top: 1rem;
+            a {
+                color: #a9c623;
+                text-decoration: none;
+                font-weight: 600;
+            }
+        }
+
+        .form-actions {
+            // display: flex;
+            // // justify-content: space-between;
+            // align-items: center;
+            margin-top: 1rem;
+
+            a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+            button {
+                padding: 0.5rem 1rem;
+                background-color: #a9c623;
+                color: white;
+                border: none;
+                border-radius: 30px;
+                width: 100%;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: darken(#a9c623, 10%);
+                }
+            }
+        }
+
+        .signin-link {
+            margin-top: 1rem;
+
+            a {
+                margin-left: 1rem;
+                font-weight: 500;
+                color: inherit;
+                text-decoration: inherit;
+                position: relative;
+            }
+
+            a:after {
+                --tw-bg-opacity: 1;
+                --tw-content: '';
+                background-color: #a9c623;
+                bottom: -0.25rem;
+                content: var(--tw-content);
+                display: block;
+                height: 2px;
+                left: 0;
+                position: absolute;
+                transition-duration: 0.3s;
+                transition-property: all;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-timing-function: linear;
+                width: 100%;
+            }
+        }
+
+        .footer {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+
+            a {
+                color: #007bff;
+                text-decoration: none;
+            }
+        }
+    }
+}

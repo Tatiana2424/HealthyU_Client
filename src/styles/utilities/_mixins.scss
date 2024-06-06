@@ -1,0 +1,45 @@
+$base-pixel-size: 16;
+
+@mixin responsive-font-size($size-small, $size-large) {
+    font-size: $size-small;
+
+    @media (min-width: 768px) {
+        font-size: $size-large;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin box-shadow($x-offset, $y-offset, $blur, $color) {
+    box-shadow: $x-offset $y-offset $blur $color;
+}
+
+@mixin button-style($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+  }
+  
+  @mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+  }

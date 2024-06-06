@@ -1,0 +1,36 @@
+.blog-componemt {
+    margin-top: 40px;
+
+    .blog-content {
+        max-width: 1300px;
+        margin: auto;
+        overflow: hidden;
+
+        .title-container{
+            margin-bottom: 50px;
+            margin-top: 50px;
+
+            .blog-title{
+                text-align: center;
+            }
+    
+            .blog-description{ 
+                text-align: center;    
+            }
+        }
+        .image-container {
+            float: left;
+            width: 400px;
+            margin-right: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-description {
+            /* текст автоматично обтікає зображення і продовжується під ним */
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.banner {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+
+    .banner-content {
+        text-align: center;
+        max-width: 600px;
+
+        .banner-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .banner-description {
+            font-size: 1.25rem;
+        }
+    }
+}

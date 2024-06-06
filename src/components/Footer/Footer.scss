@@ -1,0 +1,94 @@
+$white: #fff;
+$light-gray: #d3d3d3;
+$gray-dark: #343a40;
+
+.footer {
+    background-color: #343333;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 100px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -97px;
+        left: 0;
+        width: 100%;
+        height: 100px;    
+        background-image: url('https://res2.weblium.site/res/603426f1a34a270022c1936a/605df155f7ece2002201b375_optimized_1920.webp');
+        background-repeat: repeat-x;
+        // background-size: contain;
+    }
+
+    h5 {
+        color: #a9c623;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 0.9em;
+        color: #ddd;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+            color: #ccc;
+        }
+    }
+
+    .form-control {
+        background-color: #555;
+        border: none;
+        color: $white;
+        padding-top: 10px;
+        padding-bottom: 10px;        
+    }
+    input::placeholder {
+        color: #a5a4a4;
+      }
+
+    .contacts-field {
+        color: $white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .btn-success {
+        background-color: #a9c623;
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: bold;
+        &:hover {
+            background-color: darken(#a9c623, 10%);
+        }
+    }
+
+    .footer-bottom {
+        font-size: 0.8em;
+        color: #aaa;
+        border-top: 1px solid #444;
+        padding-top: 10px;
+    }
+
+    @media (max-width: 992px) {
+        .footer-bottom {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;
+        .row {
+            justify-content: center;
+        }
+    }
+}

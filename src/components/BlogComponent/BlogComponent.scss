@@ -1,0 +1,89 @@
+.blogComponent {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #ffffff;
+
+    .slider {
+
+        background-color: #ab646400;
+        max-width: 1300px;
+        margin-right: 30px;
+        margin-left: 30px; 
+
+        .slick-prev, .slick-next {
+            z-index: 100; // Значення має бути достатньо високим, щоб бути над іншими елементами
+        }
+
+        .slick-slide {
+            padding: 0 10px; // Додає відступи з обох боків кожного слайду
+        }
+
+        .slick-prev, .slick-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%); 
+        }
+        
+        .slick-next:before {
+            color: #a9c623;
+            font-size: 50px;
+        }
+        .slick-prev:before {
+            color: #a9c623;
+            font-size: 50px;
+        }
+
+        .slide {
+            // Style each slide
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+           // background-color: white;
+           // border-radius: 8px;
+           // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+
+            .image-container {
+               
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: auto;
+                overflow: hidden; // Щоб зображення не виходило за межі при збільшенні
+                border-radius: 5px; // Заокруглення країв контейнера, якщо потрібно
+
+                img {
+                    width: 384px;
+                    height: 256px;
+                    transition: transform 0.3s ease; // Плавний перехід
+
+                    &:hover {
+                        transform: scale(1.1); // Збільшення зображення
+                    }
+                }
+            }
+
+            .slide-title {
+                // Style for the title
+                font-size: 1.5em;
+                color: #333;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .slide-description {
+                // Style for the description
+                font-size: 1em;
+                color: #252525;
+                white-space: nowrap; 
+                width: 380px; 
+                overflow-wrap: break-word;
+                height: 40px;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+        }
+    }
+}

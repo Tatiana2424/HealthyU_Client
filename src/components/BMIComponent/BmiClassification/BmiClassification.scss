@@ -1,0 +1,32 @@
+// BmiClassification.scss
+.bmi-classification-container {
+    .classification-item {
+        margin: 0.5em 0;
+        padding: 0.5em;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        span {
+            font-weight: bold;
+        }
+        &.highlight {
+            color: #fff;
+            background-color: #a9c623;
+        }
+        &.blue {
+            color: #fff;
+            background-color: #05a4da;
+        }
+        &.red {
+            color: #fff;
+            background-color: red;
+        }
+        &.green {
+            color: #fff;
+            background-color: green;
+        }
+        &.orange{
+            color: #ffa500;
+        }
+    }
+}

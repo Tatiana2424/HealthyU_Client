@@ -1,0 +1,41 @@
+.ingredients-list-component {
+    padding: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+        url(https://images.squarespace-cdn.com/content/v1/57d60d6620099e97b49234c6/1681937263889-J06P0OUUGZKJR4DTQ4G4/blog+covers+%282%29.png?format=2500w);
+    // border: 1px solid #a9c623;
+    //
+
+    .ingredients-list {
+        font-family: Arial, sans-serif;
+        margin: 16px 0;
+        // text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        h2 {
+            margin-bottom: 8px;
+            color: #a9c623; // Adjust the color to match your design
+        }
+
+        ul {
+            padding: 0;
+            color: #a9c623;
+            // list-style: none;
+
+            li {
+                padding: 4px 0;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+                span {
+                    font-weight: 600;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

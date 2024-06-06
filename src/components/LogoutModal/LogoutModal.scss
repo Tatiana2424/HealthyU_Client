@@ -1,0 +1,37 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white !important;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    width: 700px !important;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .modal-actions button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #a9c623;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .modal-actions button:last-child {
+    background-color: #6c757d;
+  }
+  
