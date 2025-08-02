@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
 import BmiCalculator from '../../components/BMIComponent/BmiCalculator/BmiCalculator';
 import Banner from '../../components/common/Banner/Banner';
 

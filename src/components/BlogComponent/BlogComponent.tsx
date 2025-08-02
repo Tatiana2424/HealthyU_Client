@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './BlogComponent.scss';
-import { useNavigate } from 'react-router-dom';
 
 export interface BlogEntry {
     id: string;
@@ -29,8 +28,6 @@ const BlogComponent: React.FC<BlogComponentProps> = ({ entries, onEntryClick }) 
         slidesToShow: 3,
         slidesToScroll: 1,
     };
-
-    const navigate = useNavigate();
 
     const handleClick = (id: string) => {
         onEntryClick(id);

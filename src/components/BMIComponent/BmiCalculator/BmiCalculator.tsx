@@ -24,14 +24,7 @@ const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onNewBmiEntry }) => {
     const [bmiValue, setBmiValue] = useState<number>(0); // Changed to number for easier calculations
     const [bmiMessage, setBmiMessage] = useState<string>('');
     const [gaugePercent, setGaugePercent] = useState<number>(0); // State for gauge percentage
-    const [age, setAge] = useState<string>('');
-    const [gender, setGender] = useState<'male' | 'female' | ''>('');
     const userId = sessionStorage.getItem('userId');
-
-    const handleGenderChange = (selectedGender: 'male' | 'female') => {
-        setGender(selectedGender);
-    };
-
     const createBmi = async (bmiData: BMI) => {
         console.log(bmiData);
         if (userId) {
@@ -54,18 +47,6 @@ const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onNewBmiEntry }) => {
         const percent = (bmiValue - minBmi) / (maxBmi - minBmi);
         setGaugePercent(Math.min(Math.max(percent, 0), 1));
     }, [bmiValue]);
-
-    function getGaugeClass(gaugePercent: number) {
-        const percent = gaugePercent * 100;
-        if (percent < 32.3) {
-            console.log(percent);
-            return 'blue';
-        } else if (percent > 65.6) {
-            return 'red';
-        } else {
-            return 'green';
-        }
-    }
 
     const calculateBmi = () => {
         if (heightValue && weightValue) {

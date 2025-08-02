@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './ProfilePage.scss';
 import Banner from '../../components/common/Banner/Banner';
-import BmiCalculator from '../../components/BMIComponent/BmiCalculator/BmiCalculator';
 import { User } from '../../models/User';
 import { getUserById, updateUser } from '../../api/apiService';
 import { message, Spin } from 'antd';
@@ -12,10 +11,6 @@ import AdminConfirmeArticles from '../../components/AdminConfirmArticles/AdminCo
 import UserBMI from '../../components/UserBMI/UserBMI';
 
 const ProfilePage: React.FC = () => {
-    const [email, setEmail] = useState('tatiana3809@gmail.com'); // This would be fetched from your user state or context
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [activeSection, setActiveSection] = useState('personalInfo');
     const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);

@@ -9,7 +9,6 @@ import Instructions from '../../components/RecipeComponent/Instructions/Instruct
 import NutritionFacts from '../../components/RecipeComponent/NutritionFacts/NutritionFacts';
 import SearchComponent from '../../components/SearchComponent/SearchComponent';
 import RecipeList from '../../components/RecipeComponent/RecipeList/RecipeList';
-import { sampleRecipes } from '../../store/RecipeCard';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Recipe } from '../../models/Recipe';
 import apiService from '../../api/apiService';

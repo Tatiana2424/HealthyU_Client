@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Banner from '../../components/common/Banner/Banner';
 import './SearchPage.scss';
-import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import SearchComponent from '../../components/SearchComponent/SearchComponent';
 import RecipeList from '../../components/RecipeComponent/RecipeList/RecipeList';
 import apiService from '../../api/apiService';
 import { Recipe } from '../../models/Recipe';
-const useQuery = () => new URLSearchParams(useLocation().search);
+
 const SearchPage: React.FC = () => {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
