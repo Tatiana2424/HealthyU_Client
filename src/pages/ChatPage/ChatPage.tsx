@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Button, Input, List } from 'antd';
+import React, { useState, useCallback } from 'react';
+import { Button, Input } from 'antd';
 import axios from 'axios';
 import './ChatPage.scss';
-import Banner from '../../components/common/Banner/Banner';
 import ChatBubble from '../../components/ChatComponent/ChatBubble';
 import { RobotOutlined, SendOutlined } from '@ant-design/icons';
 import BouncingDotsLoader from '../../components/common/BouncingDotsLoader/BouncingDotsLoader';

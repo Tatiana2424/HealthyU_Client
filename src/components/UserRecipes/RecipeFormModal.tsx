@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal, Form, Input, InputNumber, Button, Space } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
-import axios from 'axios';
 
 const RecipeFormModal: React.FC<{
     isVisible: boolean;
