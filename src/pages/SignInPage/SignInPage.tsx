@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import './SignInPage.scss';
-import Banner from '../../components/common/Banner/Banner';
-import { Link, useNavigate } from 'react-router-dom';
-import apiService from '../../api/apiService';
-import { useAuth } from '../../context/AuthProvider';
+import React, { useState } from "react";
+import "./SignInPage.scss";
+import Banner from "../../components/common/Banner/Banner";
+import { Link, useNavigate } from "react-router-dom";
+import apiService from "../../api/apiService";
+import { useAuth } from "../../context/AuthProvider";
 
 interface LoginData {
   email: string;
@@ -17,10 +17,10 @@ interface LoginResponse {
 
 const SignInPage: React.FC = () => {
   const [loginData, setLoginData] = useState<LoginData>({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
-  const [error, setError] = useState<string | null>(null); // Додали стан для помилок
+  const [error, setError] = useState<string | null>(null);
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -31,27 +31,27 @@ const SignInPage: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setLoginData({ ...loginData, [name]: value });
-    setError(null); // Очищуємо помилки при кожному вводі
+    setError(null);
   };
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Перевірка валідації електронної пошти
     if (!validateEmail(loginData.email)) {
-      setError('Please enter a valid email address');
+      setError("Please enter a valid email address");
       return;
     }
 
     try {
-      const response = await apiService.post<LoginResponse>('https://localhost:7271/api/auth/login', loginData);
-      console.log('Login successful', response.token);
-      sessionStorage.setItem('authToken', response.token);
-      sessionStorage.setItem('userId', response.userId.toString());
+      const response = await apiService.post<LoginResponse>(
+        "/auth/login",
+        loginData
+      );
+      sessionStorage.setItem("authToken", response.token);
+      sessionStorage.setItem("userId", response.userId.toString());
       login(response.token);
-      navigate('/');
+      navigate("/");
     } catch (error: any) {
-      setError('Login failed. Please check your email and password'); // Повідомлення про помилку, якщо логін не вдався
+      setError("Login failed. Please check your email and password");
     }
   };
 

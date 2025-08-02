@@ -1,20 +1,17 @@
 .some-class {
-    @include responsive-font-size(14px, 16px);
+  @include responsive-font-size(14px, 16px);
 }
 
 .another-class {
-    @include flex-center;
-    @include box-shadow(2px, 2px, 5px, rgba(0, 0, 0, 0.2));
+  @include flex-center;
+  @include box-shadow(2px, 2px, 5px, rgba(0, 0, 0, 0.2));
 }
 
 .custom-button {
-    @include button-style(#007bff, #fff);
+  @include button-style(#007bff, #fff);
 }
 
 .example-class {
-    @include margin(
-        16,
-        8
-    ); 
-    @include padding(10, 5, 10, 5); 
+  @include margin(16, 8);
+  @include padding(10, 5, 10, 5);
 }

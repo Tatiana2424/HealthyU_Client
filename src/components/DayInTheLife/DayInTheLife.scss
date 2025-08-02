@@ -1,71 +1,62 @@
-// DayInTheLife.scss
 .day-in-the-life {
+  display: flex;
+  max-width: 100%;
+  align-items: stretch;
+
+  .left-side {
+    img {
+      max-width: 70%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+
+  .right-side {
+    padding: 20px;
+    min-width: 600px;
     display: flex;
-    max-width: 100%;
-    align-items: stretch;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 200px;
 
-    .right-side {
-     
-    }
-    .left-side {
-       
-    }
-
-    .left-side {
-        
-        img {
-            max-width: 70%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            object-position: 50% 50%;
-        }
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
-    .right-side {
-        padding: 20px;
-        min-width: 600px;
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        margin-top: 20px;
-        margin-right: 200px;
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
 
-        h1 {
-            font-size: 40px; // Adjust as necessary
-            margin-bottom: 10px;
+    .meal-times {
+      text-align: start;
+      padding: 40px;
+      border: solid;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
+
+      .meal-description {
+        margin-bottom: 5px;
+      }
+
+      .time-block {
+        h2 {
+          font-size: 24px;
+          margin-bottom: 15px;
         }
 
         p {
-            font-size: 18px; // Adjust as necessary
-            margin-bottom: 30px;
+          cursor: text;
+          &:hover {
+            background-color: #f0f0f0;
+          }
         }
-
-        .meal-times {
-            text-align: start;
-            padding: 40px;
-            border: solid;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 80px;
-
-            .meal-description {
-                margin-bottom: 5px;
-            }
-
-            .time-block {
-                h2 {
-                    font-size: 24px; // Adjust as necessary
-                    margin-bottom: 15px;
-                }
-
-                p {
-                    cursor: text;
-                    &:hover {
-                        background-color: #f0f0f0; // Change as needed
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface HtmlContentProps {
-    htmlString: string;
+  htmlString: string;
 }
 
 const HtmlContent: React.FC<HtmlContentProps> = ({ htmlString }) => {
-    return (
-        <div dangerouslySetInnerHTML={{ __html: htmlString }} />
-    );
+  return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
 };
 
 export default HtmlContent;

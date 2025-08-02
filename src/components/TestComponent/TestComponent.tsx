@@ -5,7 +5,6 @@ const TestComponent: React.FC = () => {
     const [responseData, setResponseData] = useState<any>(null);
     const [error, setError] = useState<string>('');
 
-    // Example GET request
     const handleGet = async () => {
         try {
             const response = await apiService.get('/your-get-endpoint');
@@ -16,11 +15,10 @@ const TestComponent: React.FC = () => {
         }
     };
 
-    // Example POST request
     const handlePost = async () => {
         try {
             const postData = {
-                /* your POST data here */
+               
             };
             const response = await apiService.post(
                 '/your-post-endpoint',
@@ -33,11 +31,10 @@ const TestComponent: React.FC = () => {
         }
     };
 
-    // Example PUT request
     const handlePut = async () => {
         try {
             const putData = {
-                /* your PUT data here */
+              
             };
             const response = await apiService.put(
                 '/your-put-endpoint',
@@ -50,7 +47,6 @@ const TestComponent: React.FC = () => {
         }
     };
 
-    // Example DELETE request
     const handleDelete = async () => {
         try {
             const response = await apiService.delete('/your-delete-endpoint');
