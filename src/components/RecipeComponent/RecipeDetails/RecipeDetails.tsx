@@ -1,11 +1,8 @@
-import React from 'react';
-import './RecipeDetails.scss';
+import React from "react";
+import "./RecipeDetails.scss";
 
 const RecipeDetails: React.FC = () => {
-  return (
-    <div>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default RecipeDetails;

@@ -1,74 +1,72 @@
-// RecipeCard.scss
 .recipe-card {
-  display: flex; // Use flex layout
-  flex-direction: column; // Stack children vertically
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-    width: 250px; // Adjust width as needed
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin: 10px;
-    font-family: Arial, sans-serif;
-  
-    .recipe-image {
-      position: relative;
-  
-      img {
-        width: 100%;
-        height: 150px; // Adjust height as needed
-        object-fit: cover;
-      }
-  
-      .favorite-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        font-size: 1.5em;
-        color: #ff4466;
-        cursor: pointer;
-      }
+  width: 250px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  font-family: Arial, sans-serif;
+
+  .recipe-image {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
     }
-  
-    .recipe-info {
-      padding: 10px;
-      display: flex; // Use flex layout
-        flex-direction: column; // Stack children vertically
-        height: 100%; // Take full height of parent
-        justify-content: space-between; // Distribute space
-  
-      .recipe-category {
-        display: block;
+
+    .favorite-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      color: #ff4466;
+      cursor: pointer;
+    }
+  }
+
+  .recipe-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+    .recipe-category {
+      display: block;
+      font-size: 0.85em;
+      color: #888;
+    }
+
+    .recipe-title {
+      margin: 5px 0;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .recipe-rating {
+      display: flex;
+      align-items: center;
+      .star {
+        color: #e0e0e0;
+      }
+
+      .filled {
+        color: #ffc107;
+      }
+
+      .total-ratings {
         font-size: 0.85em;
-        color: #888;
-      }
-  
-      .recipe-title {
-        margin: 5px 0;
-        font-size: 1.1em;
-        color: #333;
-      }
-  
-      .recipe-rating {
-        display: flex; // Use flex layout
-        align-items: center; // Center align items
-        .star {
-          color: #e0e0e0;
-        }
-  
-        .filled {
-          color: #ffc107;
-        }
-  
-        .total-ratings {
-          font-size: 0.85em;
-          color: #666;
-          margin-left: 5px;
-        }
+        color: #666;
+        margin-left: 5px;
       }
     }
   }
-  
+}
