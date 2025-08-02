@@ -1,48 +1,46 @@
 .instructions {
-    font-family: 'Arial', sans-serif;
-    max-width: 600px;
-    margin: 20px auto;
-    border: 1px solid #a9c623;
-    border-top: 12px solid #a9c623;
-    padding: 30px;
-    border-radius: 8px;
-  
-    h2 {
-      font-size: 24px;
-      color: #333;
-      margin-bottom: 10px;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 600;
+  font-family: "Arial", sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #a9c623;
+  border-top: 12px solid #a9c623;
+  padding: 30px;
+  border-radius: 8px;
+
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .step {
+    margin-bottom: 15px;
+
+    strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #a9c623;
     }
-  
-    .step {
-      margin-bottom: 15px;
-      
-      strong {
-        display: block;
-        margin-bottom: 5px;
-        color: #a9c623; // Or any color that matches your design
-      }
-  
-      p {
-        font-size: 16px;
-        color: #555;
-        line-height: 1.6;
-      }
-    }
-    .recipe-image {
-        display: flex;
-        justify-content: center;
-        height:300px;
-        
-        img{
-            width: auto;
-            height:300px;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-        }
-      
+
+    p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
     }
   }
-  
+  .recipe-image {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+
+    img {
+      width: auto;
+      height: 300px;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+  }
+}
