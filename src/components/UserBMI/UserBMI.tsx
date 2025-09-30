@@ -20,7 +20,7 @@ const UserBMI: React.FC<Props> = ({ userId }) => {
   const fetchBmiData = async () => {
     try {
       const response = await axios.get<BMIData[]>(
-        `https://localhost:7271/api/Bmi/GetByUserId/${userId}`
+        `${process.env.REACT_APP_API_URL}/api/Bmi/GetByUserId/${userId}`
       );
       const dataWithKeys = response.data.map((item, index) => ({
         ...item,
@@ -34,7 +34,7 @@ const UserBMI: React.FC<Props> = ({ userId }) => {
 
   useEffect(() => {
     fetchBmiData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
 
   const handleNewBmiEntry = () => {
@@ -43,7 +43,9 @@ const UserBMI: React.FC<Props> = ({ userId }) => {
 
   const handleDeleteBmiEntry = async (id: number) => {
     try {
-      await axios.delete(`https://localhost:7271/api/Bmi/Delete/${id}`);
+      await axios.delete(
+        `${process.env.REACT_APP_API_URL}/api/Bmi/Delete/${id}`
+      );
       message.success("BMI entry deleted successfully");
       fetchBmiData(); // Refresh the list after deletion
     } catch (error) {

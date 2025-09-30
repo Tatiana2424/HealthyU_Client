@@ -55,9 +55,9 @@ const SearchComponent: React.FC<SearchComponentProps> = ({
     const fetchedSearchKeywords = async () => {
       try {
         const fetchedSearchKeywords = await apiService.get<SearchKeywords[]>(
-          "https://localhost:7271/api/SearchKeyword/GetAll"
+          `${process.env.REACT_APP_API_URL}/api/SearchKeyword/GetAll`
         );
-        console.log("fetchedSearchKeywords", fetchedSearchKeywords);
+
         setSearchKeywords(fetchedSearchKeywords);
       } catch (error) {
         console.error("Failed to fetch articles", error);

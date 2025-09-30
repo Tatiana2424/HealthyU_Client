@@ -45,7 +45,7 @@ const SignInPage: React.FC = () => {
 
     try {
       const response = await apiService.post<LoginResponse>(
-        "https://localhost:7271/api/auth/login",
+        `${process.env.REACT_APP_API_URL}/api/auth/login`,
         loginData
       );
       console.log("Login successful", response.token);

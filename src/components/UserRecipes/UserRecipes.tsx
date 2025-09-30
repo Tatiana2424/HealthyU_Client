@@ -54,7 +54,7 @@ const UserRecipes: React.FC<Props> = ({ userId }) => {
       setIsLoading(true);
       try {
         const response = await axios.get<Recipe[]>(
-          `https://localhost:7271/api/recipe/GetByUserId/${userId}`
+          `${process.env.REACT_APP_API_URL}/api/recipe/GetByUserId/${userId}`
         );
         console.log(response.data);
         setRecipes(response.data);
@@ -147,13 +147,13 @@ const UserRecipes: React.FC<Props> = ({ userId }) => {
     try {
       if (currentRecipe) {
         await axios.put(
-          `https://localhost:7271/api/recipe/Update/${currentRecipe.id}`,
+          `${process.env.REACT_APP_API_URL}/api/recipe/Update/${currentRecipe.id}`,
           recipeData
         );
         message.success("Recipe updated successfully");
       } else {
         await axios.post(
-          "https://localhost:7271/api/recipe/Create/",
+          `${process.env.REACT_APP_API_URL}/api/recipe/Create/`,
           recipeData
         );
         message.success("Recipe added successfully");
@@ -165,8 +165,7 @@ const UserRecipes: React.FC<Props> = ({ userId }) => {
 
     setIsModalVisible(false);
     form.resetFields();
-    // form.resetFields(); // Clear form fields after submission
-    setRecipeOperation((prev) => prev + 1); // Refresh the recipes list
+    setRecipeOperation((prev) => prev + 1);
   };
 
   const handleCancel = () => {
@@ -177,7 +176,9 @@ const UserRecipes: React.FC<Props> = ({ userId }) => {
   const deleteRecipe = async (id: number) => {
     console.log(id);
     try {
-      await axios.delete(`https://localhost:7271/api/recipe/Delete/${id}`);
+      await axios.delete(
+        `${process.env.REACT_APP_API_URL}/api/recipe/Delete/${id}`
+      );
       console.log(id);
       message.success("Recipe deleted successfully");
       setRecipeOperation((prev) => prev + 1); // Refresh the recipes list

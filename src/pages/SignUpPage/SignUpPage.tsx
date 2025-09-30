@@ -73,7 +73,7 @@ const SignUpPage: React.FC = () => {
     console.log(userData);
     try {
       const response = await apiService.post<RegisterResponse>(
-        "https://localhost:7271/api/auth/register",
+        `${process.env.REACT_APP_API_URL}/api/auth/register`,
         userData
       );
       console.log("Registration successful", response.token);

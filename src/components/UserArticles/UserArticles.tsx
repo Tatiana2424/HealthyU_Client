@@ -37,7 +37,7 @@ const UserArticles: React.FC<Props> = ({ userId }) => {
       setIsLoading(true);
       try {
         const response = await axios.get<BlogEntry[]>(
-          `https://localhost:7271/api/article/GetByUsetrId/${userId}`
+          `${process.env.REACT_APP_API_URL}/api/article/GetByUsetrId/${userId}`
         );
         setArticles(response.data);
         console.log(response.data);
@@ -72,7 +72,7 @@ const UserArticles: React.FC<Props> = ({ userId }) => {
     if (currentArticle) {
       try {
         await axios.put(
-          `https://localhost:7271/api/Article/Update/${currentArticle.id}`,
+          `${process.env.REACT_APP_API_URL}/api/Article/Update/${currentArticle.id}`,
           articleData
         );
         message.success("Updated article successfully", 10);
@@ -102,7 +102,9 @@ const UserArticles: React.FC<Props> = ({ userId }) => {
 
   const deleteArticle = async (id: string) => {
     try {
-      await axios.delete(`https://localhost:7271/api/Article/Delete/${id}`);
+      await axios.delete(
+        `${process.env.REACT_APP_API_URL}/api/Article/Delete/${id}`
+      );
       message.success("Deleted article successfully", 10);
     } catch (error) {
       console.error("Failed to delete article", error);

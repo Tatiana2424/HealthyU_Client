@@ -22,7 +22,7 @@ const BlogPage: React.FC = () => {
             try {
                 // Use the get method from your apiService to fetch blog entries
                 const entries = await apiService.get<BlogEntry[]>(
-                    'https://localhost:7271/api/Article/GetAll'
+                    `${process.env.REACT_APP_API_URL}/api/Article/GetAll`
                 );
                 console.log(entries);
                 setBlogEntries(entries);

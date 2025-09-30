@@ -49,7 +49,7 @@ export default apiService;
 export const getUserById = async (id: number): Promise<User | null> => {
   try {
     const response = await apiService.get<User>(
-      `https://localhost:7271/api/User/GetById/${id}`
+      `${process.env.REACT_APP_API_URL}/api/User/GetById/${id}`
     );
     return response; // Assuming this returns the data in the correct shape
   } catch (error) {
@@ -60,14 +60,14 @@ export const getUserById = async (id: number): Promise<User | null> => {
 
 export const updateUser = async (id: number, userData: User) => {
   return await apiService.put(
-    `https://localhost:7271/api/User/Update/${id}`,
+    `${process.env.REACT_APP_API_URL}/api/User/Update/${id}`,
     userData
   );
 };
 
 export const createArticle = async (articleData: ArticleEntry) => {
   return await apiService.post(
-    `https://localhost:7271/api/Article/Create`,
+    `${process.env.REACT_APP_API_URL}/api/Article/Create`,
     articleData
   );
 };
